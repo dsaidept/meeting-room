@@ -1,1 +1,116 @@
-<h1>hello meeting-room</h1>
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ห้องประชุม ฝยท.</title>
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Prompt', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            margin-top: 10px;
+            margin-bottom: 5px;
+            color: #333;
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .icons-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            /* Space between icons */
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .calendar-container {
+            margin-top: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .refresh-btn,
+        .open-new-page-btn {
+            display: inline-block;
+            cursor: pointer;
+            font-size: 18x;
+            color: gray;
+            margin-left: 1px;
+            vertical-align: middle;
+            transition: color 0.3s ease;
+            /* Smooth transition */
+        }
+
+        .refresh-btn:hover,
+        .open-new-page-btn:hover {
+            color: #FFB612;
+        }
+
+        .buttons {
+            margin-top: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 5px;
+            cursor: pointer;
+            background-color: transparent;
+            /* Transparent background */
+            color: #FFB612;
+            border: 2px solid #FFB612;
+            font-family: 'Prompt', sans-serif;
+            /* Apply Prompt font to button */
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #FFB612;
+            color: white;
+            /* White text when hovered */
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>ตารางห้องประชุม ฝยท.</h1>
+
+    <!-- Container for Reload and Open New Page Icons -->
+    <div class="icons-container">
+        <!-- Reload Icon -->
+        <i class="fas fa-redo-alt refresh-btn" onclick="window.location.reload();"></i>
+
+        <!-- Open Calendar Icon -->
+        <i class="fas fa-external-link-alt open-new-page-btn"
+            onclick="window.open('https://calendar.google.com/calendar/embed?ctz=Asia%2FBangkok&showPrint=0&showTitle=0&showTz=0&showCalendars=0&src=ZHNhaWRlcHRAZ21haWwuY29t&src=ZW4udGgjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23E4C441&color=%23D50000', '_blank');"></i>
+    </div>
+
+    <div class="calendar-container">
+        <!-- Google Calendar iframe with specific size -->
+        <iframe
+            src="https://calendar.google.com/calendar/embed?height=400&wkst=1&ctz=Asia%2FBangkok&showPrint=0&showTitle=0&showTz=0&showCalendars=0&src=ZHNhaWRlcHRAZ21haWwuY29t&src=ZW4udGgjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23E4C441&color=%23D50000"
+            style="border:solid 1px #777" width="302" height="400" frameborder="0" scrolling="no"></iframe>
+    </div>
+
+    <div class="buttons">
+        <!-- Button to open a new page -->
+        <button
+            onclick="window.open('https://calendar.google.com/calendar/appointments/schedules/AcZssZ0OqnHiFrPwcMtq3hK-sUvbCKZLRJ6xutYVsAJvOKONRhdr9npyVZlfACU8O12riIPdWJQ21jXh?gv=true', '_blank')">จองห้องประชุม
+            ฝยท.</button>
+    </div>
+
+</body>
+
+</html>
